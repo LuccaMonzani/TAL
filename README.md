@@ -41,3 +41,4 @@ São implementadas como classes genéricas:
 - I2C
 - UART/USART
 - SPI
+- Filtros Digitais
