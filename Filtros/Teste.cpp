@@ -17,9 +17,9 @@ int main()
     std::vector<float> vetor_teste{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     std::vector<float> vetor_pesos{0.2, 0.3, 0.5};
 
-    std::vector<float> vetor_resultado_mms = Filtros::medial_movel_simples(vetor_teste, 3);
-    std::vector<float> vetor_resultado_mmp = Filtros::medial_movel_ponderada(vetor_teste, vetor_pesos);
-    std::vector<float> vetor_resultado_mme = Filtros::medial_movel_exponencial(vetor_teste, 3);
+    std::vector<float> vetor_resultado_mms = Filtros::media_movel_simples(vetor_teste, 3);
+    std::vector<float> vetor_resultado_mmp = Filtros::media_movel_ponderada(vetor_teste, vetor_pesos);
+    std::vector<float> vetor_resultado_mme = Filtros::media_movel_exponencial(vetor_teste, 3);
 
     print_vetor(vetor_teste);
     print_vetor(vetor_resultado_mms);

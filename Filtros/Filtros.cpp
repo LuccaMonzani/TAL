@@ -2,7 +2,7 @@
 
 namespace Filtros
 {
-    std::vector<float> medial_movel_simples(std::vector<float> dados, int tamanho_da_amostra)
+    std::vector<float> media_movel_simples(std::vector<float> dados, int tamanho_da_amostra)
     /*Media movel simples para atenuar variações bruscas da amostragem*/
     {
         int tamanho_vetor_dados = dados.size();
