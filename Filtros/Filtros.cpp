@@ -5,16 +5,18 @@ namespace Filtros
     std::vector<float> medial_movel_simples(std::vector<float> dados, int tamanho_da_amostra)
     /*Media movel simples para atenuar variações bruscas da amostragem*/
     {
-        int tamanho_vetor_dados = vetor_dados.size();
+        int tamanho_vetor_dados = dados.size();
         std::vector<float> vetor_retorno;
+
+        float acc;
 
         for (int i = 0; i <= tamanho_vetor_dados - tamanho_da_amostra; i++)
         {
-            float acc = 0;
+            acc = 0;
 
             for (int j = 0; j < tamanho_da_amostra; j++)
             {
-                acc += vetor_dados[i + j];
+                acc += dados[i + j];
             }
 
             acc /= tamanho_da_amostra;
@@ -24,22 +26,24 @@ namespace Filtros
         return vetor_retorno;
     }
 
-    std::vector<float> media_movel_ponderada(std::vector<float> dados, std::vector<float>pesos)
+    std::vector<float> media_movel_ponderada(std::vector<float> dados, std::vector<float> pesos)
     /*Media movel ponderada, onde pode-se escolher o quanto cada elemento*/
     {
-        int tamanho_vetor_dados = vetor_dados.size();
-        int tamanho_vetor_pesos = vetor_pesos.size();
+        int tamanho_vetor_dados = dados.size();
+        int tamanho_vetor_pesos = pesos.size();
         std::vector<float> vetor_retorno;
+
+        float acc1, acc2;
 
         for (int i = 0; i <= tamanho_vetor_dados - tamanho_vetor_pesos; i++)
         {
-            float acc1 = 0;
-            float acc2 = 0;
+            acc1 = 0;
+            acc2 = 0;
 
             for (int j = 0; j < tamanho_vetor_pesos; j++)
             {
-                acc1 += vetor_dados[i + j] * vetor_pesos[j];
-                acc2 += vetor_pesos[j];
+                acc1 += dados[i + j] * pesos[j];
+                acc2 += pesos[j];
             }
 
             acc1 /= acc2;
@@ -50,23 +54,25 @@ namespace Filtros
     }
 
     std::vector<float> media_movel_exponencial(std::vector<float> dados, int tamanho_da_amostra)
-    /* 
+    /*
     Media movel exponencial, um tipo de media onde os dados mais recentes possuem um peso maior
     */
     {
 
-        int tamanho_vetor_dados = vetor_dados.size();
+        int tamanho_vetor_dados = dados.size();
         float alpha = 2 / ((float)tamanho_da_amostra + 1);
         std::vector<float> vetor_retorno;
 
+        float acc1, acc2;
+
         for (int i = 0; i <= tamanho_vetor_dados - tamanho_da_amostra; i++)
         {
-            float acc1 = 0;
-            float acc2 = 0;
+            acc1 = 0;
+            acc2 = 0;
 
             for (int j = 0; j < tamanho_da_amostra; j++)
             {
-                acc1 += vetor_dados[i + j] * pow(1 - alpha, tamanho_da_amostra - j - 1);
+                acc1 += dados[i + j] * pow(1 - alpha, tamanho_da_amostra - j - 1);
                 acc2 += pow(1 - alpha, tamanho_da_amostra - j - 1);
             }
 
