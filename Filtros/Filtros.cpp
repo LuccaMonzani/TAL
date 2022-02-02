@@ -2,7 +2,8 @@
 
 namespace Filtros
 {
-    std::vector<float> MMS(std::vector<float> vetor_dados, int tamanho_da_amostra)
+    std::vector<float> medial_movel_simples(std::vector<float> dados, int tamanho_da_amostra)
+    /*Media movel simples para atenuar variações bruscas da amostragem*/
     {
         int tamanho_vetor_dados = vetor_dados.size();
         std::vector<float> vetor_retorno;
@@ -23,7 +24,8 @@ namespace Filtros
         return vetor_retorno;
     }
 
-    std::vector<float> MMP(std::vector<float> vetor_dados, std::vector<float> vetor_pesos)
+    std::vector<float> media_movel_ponderada(std::vector<float> dados, std::vector<float>pesos)
+    /*Media movel ponderada, onde pode-se escolher o quanto cada elemento*/
     {
         int tamanho_vetor_dados = vetor_dados.size();
         int tamanho_vetor_pesos = vetor_pesos.size();
@@ -47,7 +49,10 @@ namespace Filtros
         return vetor_retorno;
     }
 
-    std::vector<float> MME(std::vector<float> vetor_dados, int tamanho_da_amostra)
+    std::vector<float> media_movel_exponencial(std::vector<float> dados, int tamanho_da_amostra)
+    /* 
+    Media movel exponencial, um tipo de media onde os dados mais recentes possuem um peso maior
+    */
     {
 
         int tamanho_vetor_dados = vetor_dados.size();
