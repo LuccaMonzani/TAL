@@ -1,4 +1,6 @@
-<h1 align="center" style="color:white; background-color:black">Generics</h1>
+<h1 align="center" style="color:white; background-color:black">TAL</h1>
+<h2 align="center" style="color:white; background-color:black">Tupã Abstraction Layer</h2>
+
 <h4 align="center">Generic classes to be used by all microcontrollers</h4>
 
 <p align="center">
