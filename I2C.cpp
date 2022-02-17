@@ -14,8 +14,8 @@ I2C::~I2C() {
 
 uint8_t *I2C::ler(uint16_t tam_registrador, uint16_t registrador, uint16_t tamanho) {
     uint8_t *dados = (uint8_t*)malloc(tamanho * sizeof(uint8_t));
-	HAL_I2C_Mem_Read(this->handler, this->endereco, registrador, tam_registrador, dados, tamanho, this->delay);
-	return dados;
+    HAL_I2C_Mem_Read(this->handler, this->endereco, registrador, tam_registrador, dados, tamanho, this->delay);
+    return dados;
 }
 
 
