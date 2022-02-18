@@ -1,7 +1,7 @@
 <h1 align="center" style="color:white; background-color:black">TAL</h1>
 <h2 align="center" style="color:white; background-color:black">Tupã Abstraction Layer</h2>
 
-<h4 align="center">Generic classes to be used by all microcontrollers</h4>
+<h4 align="center">Classes genéricas utilizadas por todos os microcontroladores</h4>
 
 <p align="center">
     <a href="https://tupa.eesc.usp.br//">
@@ -33,7 +33,16 @@
     </a>
 </p>
 
-<h2>Escopo</h2>
+## Objetivo
+
+O objetivo deste repositório é armazenar classes relativas aos diferentes protocolos de comunicação utilizados no projeto.
+
+É ideal que as classes sejam capazes de abstrair ainda mais a HAL (Hardware Abstraction Layer) para que esta não seja necessária ao usuário final.
+
+A implementação destas classes permite uma padronização no código de todos os microcontroladores, bem como garante que sempre se estará utilizando
+funções que foram previamente testadas e validadas.
+
+## Escopo
 
 São implementadas como classes genéricas:
 
@@ -44,3 +53,7 @@ São implementadas como classes genéricas:
 - UART/USART
 - SPI
 - Filtros Digitais
+
+## Complementos
+
+[Documentação](https://docs.google.com/document/d/1eUKlfLGgAHjWBRXNp35zcnhgNHb5ZKfJx6TLp2YPtLc/edit)
