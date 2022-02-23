@@ -1,7 +1,9 @@
+#ifdef HAL_I2C_MODULE_ENABLED
+#include "stm32f1xx_hal_i2c.h"
+
 #ifndef I2C_H
 #define I2C_H
 
-#include "main.h"
 #include <stdlib.h>
 #include <stdint.h>
 
@@ -20,3 +22,6 @@ class I2C {
 };
 
 #endif
+
+
+#endif /* HAL_I2C_MODULE_ENABLED */

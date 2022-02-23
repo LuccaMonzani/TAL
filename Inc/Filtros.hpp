@@ -1,8 +1,6 @@
 #ifndef FILTROS
 #define FILTROS
 
-#include <iostream>
-#include <array>
 #include <vector>
 #include <math.h>
 #include <stdint.h>

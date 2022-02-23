@@ -101,3 +101,4 @@ namespace Filtros
     template std::vector<uint32_t> media_movel_exponencial(std::vector<uint32_t> dados, uint8_t tamanho_da_amostra);
     template std::vector<float> media_movel_exponencial(std::vector<float> dados, uint8_t tamanho_da_amostra);
 }
+
