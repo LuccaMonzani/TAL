@@ -39,16 +39,16 @@
 #define PIN_15 ((uint16_t)0x8000)  /* Pin 15 selected   */
 #define PIN_All ((uint16_t)0xFFFF) /* All pins selected */
 
-namespace GPIO
+
+class GPIO
 {
-	class dispositivo
-	{
 		private:
 			GPIO_TypeDef *porta;
 			uint16_t pino;
 
 		public:
-			dispositivo(GPIO_TypeDef *endereco_porta, uint16_t endereco_pino) : porta(endereco_porta), pino(endereco_pino) {}
+			GPIO(){};
+			GPIO(GPIO_TypeDef *endereco_porta, uint16_t endereco_pino) : porta(endereco_porta), pino(endereco_pino) {}
 
 			void escrever(GPIO_PinState estado);
 			
@@ -56,10 +56,9 @@ namespace GPIO
 
 			bool ler(uint16_t pino);
 
-			void toogle(uint32_t tempo_em_alto = 1000, uint32_t tempo_em_baixo = 1000);
-	};
-
-} // namespace GPIO
+			void toggle(uint32_t tempo_em_alto = 1000, uint32_t tempo_em_baixo = 1000);
+};
+ // namespace GPIO
 
 #endif /* INC_GPIO_HPP_ */
 
