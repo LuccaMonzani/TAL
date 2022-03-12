@@ -31,3 +31,6 @@
 *.out
 *.app
 
+# Doc files
+Docs/html/
+Docs/latex/
