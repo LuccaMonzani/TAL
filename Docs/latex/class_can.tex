@@ -1,0 +1,133 @@
+\hypertarget{class_can}{}\doxysection{Can Class Reference}
+\label{class_can}\index{Can@{Can}}
+
+
+{\ttfamily \#include $<$CAN.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_can_a42692623ed35d0df7ec1f3da67dc8066}{Can}} (CAN\+\_\+\+Handle\+Type\+Def $\ast$\mbox{\hyperlink{class_can_ae762158c35d3ad8aec9f9915873ac1b1}{handler}}, uint32\+\_\+t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\+\_\+t id)
+\item 
+void \mbox{\hyperlink{class_can_ad7d6fe131d5e3eeccc7468cf900a7f10}{iniciar}} (uint32\+\_\+t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\+\_\+t id)
+\item 
+void \mbox{\hyperlink{class_can_ae7e3f9ab5eb8f74c51ef8a96f4f835e0}{setup}} (uint32\+\_\+t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\+\_\+t id\+\_\+high, uint32\+\_\+t id\+\_\+low, uint32\+\_\+t mask\+\_\+high, uint32\+\_\+t mask\+\_\+low)
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{class_can_ad3343c00d88f9b7460a1d6c1ebfb9bbf}{ler}} ()
+\item 
+bool \mbox{\hyperlink{class_can_a98e67a8a35ded18f35c79ab7d43ca7a6}{enviar}} (uint8\+\_\+t $\ast$dados, uint8\+\_\+t tamanho)
+\item 
+void \mbox{\hyperlink{class_can_a331fd2bb34627200b531e47427451b91}{esperar}} ()
+\item 
+virtual \mbox{\hyperlink{class_can_a43973d2de0ff08db8542a24815c586af}{$\sim$\+Can}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+CAN\+\_\+\+Handle\+Type\+Def $\ast$ \mbox{\hyperlink{class_can_ae762158c35d3ad8aec9f9915873ac1b1}{handler}}
+\item 
+CAN\+\_\+\+Filter\+Type\+Def \mbox{\hyperlink{class_can_a3276009b0150ecb538a9ced162760385}{filtro}}
+\item 
+CAN\+\_\+\+Tx\+Header\+Type\+Def \mbox{\hyperlink{class_can_a8aa5b2926a6bc3040b2413f38bdc4885}{tx\+\_\+header}}
+\item 
+CAN\+\_\+\+Rx\+Header\+Type\+Def \mbox{\hyperlink{class_can_a835f3c89e2d035bed5e9b898c3b115d7}{rx\+\_\+header}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_can_a39b2ca8f9eeda3c40a61b3d4fc60b084}{mailbox}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}
+\item 
+bool \mbox{\hyperlink{class_can_a7680303229e025740d7a50e0ef7df1a8}{lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_can_a42692623ed35d0df7ec1f3da67dc8066}\label{class_can_a42692623ed35d0df7ec1f3da67dc8066}} 
+\index{Can@{Can}!Can@{Can}}
+\index{Can@{Can}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{Can()}{Can()}}
+{\footnotesize\ttfamily Can\+::\+Can (\begin{DoxyParamCaption}\item[{CAN\+\_\+\+Handle\+Type\+Def $\ast$}]{handler,  }\item[{uint32\+\_\+t}]{interrupt,  }\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_can_a43973d2de0ff08db8542a24815c586af}\label{class_can_a43973d2de0ff08db8542a24815c586af}} 
+\index{Can@{Can}!````~Can@{$\sim$Can}}
+\index{````~Can@{$\sim$Can}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{$\sim$Can()}{~Can()}}
+{\footnotesize\ttfamily Can\+::$\sim$\+Can (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_can_a98e67a8a35ded18f35c79ab7d43ca7a6}\label{class_can_a98e67a8a35ded18f35c79ab7d43ca7a6}} 
+\index{Can@{Can}!enviar@{enviar}}
+\index{enviar@{enviar}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{enviar()}{enviar()}}
+{\footnotesize\ttfamily bool Can\+::enviar (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dados,  }\item[{uint8\+\_\+t}]{tamanho }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_can_a331fd2bb34627200b531e47427451b91}\label{class_can_a331fd2bb34627200b531e47427451b91}} 
+\index{Can@{Can}!esperar@{esperar}}
+\index{esperar@{esperar}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{esperar()}{esperar()}}
+{\footnotesize\ttfamily void Can\+::esperar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_can_ad7d6fe131d5e3eeccc7468cf900a7f10}\label{class_can_ad7d6fe131d5e3eeccc7468cf900a7f10}} 
+\index{Can@{Can}!iniciar@{iniciar}}
+\index{iniciar@{iniciar}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{iniciar()}{iniciar()}}
+{\footnotesize\ttfamily void Can\+::iniciar (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{interrupt,  }\item[{uint32\+\_\+t}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_can_ad3343c00d88f9b7460a1d6c1ebfb9bbf}\label{class_can_ad3343c00d88f9b7460a1d6c1ebfb9bbf}} 
+\index{Can@{Can}!ler@{ler}}
+\index{ler@{ler}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ Can\+::ler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_can_ae7e3f9ab5eb8f74c51ef8a96f4f835e0}\label{class_can_ae7e3f9ab5eb8f74c51ef8a96f4f835e0}} 
+\index{Can@{Can}!setup@{setup}}
+\index{setup@{setup}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Can\+::setup (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{interrupt,  }\item[{uint32\+\_\+t}]{id\+\_\+high,  }\item[{uint32\+\_\+t}]{id\+\_\+low,  }\item[{uint32\+\_\+t}]{mask\+\_\+high,  }\item[{uint32\+\_\+t}]{mask\+\_\+low }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_can_a3276009b0150ecb538a9ced162760385}\label{class_can_a3276009b0150ecb538a9ced162760385}} 
+\index{Can@{Can}!filtro@{filtro}}
+\index{filtro@{filtro}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{filtro}{filtro}}
+{\footnotesize\ttfamily CAN\+\_\+\+Filter\+Type\+Def Can\+::filtro\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_ae762158c35d3ad8aec9f9915873ac1b1}\label{class_can_ae762158c35d3ad8aec9f9915873ac1b1}} 
+\index{Can@{Can}!handler@{handler}}
+\index{handler@{handler}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily CAN\+\_\+\+Handle\+Type\+Def$\ast$ Can\+::handler\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_a545e60b1ac834dab75a3377cba748c1e}\label{class_can_a545e60b1ac834dab75a3377cba748c1e}} 
+\index{Can@{Can}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{interrupt}{interrupt}}
+{\footnotesize\ttfamily uint32\+\_\+t Can\+::interrupt\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_a7680303229e025740d7a50e0ef7df1a8}\label{class_can_a7680303229e025740d7a50e0ef7df1a8}} 
+\index{Can@{Can}!lock@{lock}}
+\index{lock@{lock}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily bool Can\+::lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_a39b2ca8f9eeda3c40a61b3d4fc60b084}\label{class_can_a39b2ca8f9eeda3c40a61b3d4fc60b084}} 
+\index{Can@{Can}!mailbox@{mailbox}}
+\index{mailbox@{mailbox}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{mailbox}{mailbox}}
+{\footnotesize\ttfamily uint32\+\_\+t Can\+::mailbox\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_a835f3c89e2d035bed5e9b898c3b115d7}\label{class_can_a835f3c89e2d035bed5e9b898c3b115d7}} 
+\index{Can@{Can}!rx\_header@{rx\_header}}
+\index{rx\_header@{rx\_header}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{rx\_header}{rx\_header}}
+{\footnotesize\ttfamily CAN\+\_\+\+Rx\+Header\+Type\+Def Can\+::rx\+\_\+header\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_can_a8aa5b2926a6bc3040b2413f38bdc4885}\label{class_can_a8aa5b2926a6bc3040b2413f38bdc4885}} 
+\index{Can@{Can}!tx\_header@{tx\_header}}
+\index{tx\_header@{tx\_header}!Can@{Can}}
+\doxysubsubsection{\texorpdfstring{tx\_header}{tx\_header}}
+{\footnotesize\ttfamily CAN\+\_\+\+Tx\+Header\+Type\+Def Can\+::tx\+\_\+header\hspace{0.3cm}{\ttfamily [private]}}
+

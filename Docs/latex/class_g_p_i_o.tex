@@ -1,0 +1,85 @@
+\hypertarget{class_g_p_i_o}{}\doxysection{GPIO Class Reference}
+\label{class_g_p_i_o}\index{GPIO@{GPIO}}
+
+
+{\ttfamily \#include $<$GPIO.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_p_i_o_ab443a641cef81b1a9ec0211c5aa9c1ac}{GPIO}} ()
+\item 
+\mbox{\hyperlink{class_g_p_i_o_a1fc2b93f6c66e85fab2f6cfadc486971}{GPIO}} (GPIO\+\_\+\+Type\+Def $\ast$endereco\+\_\+porta, uint16\+\_\+t endereco\+\_\+pino)
+\item 
+void \mbox{\hyperlink{class_g_p_i_o_a3d02df5cc317d938691346ee0a6aac53}{escrever}} (GPIO\+\_\+\+Pin\+State estado)
+\item 
+void \mbox{\hyperlink{class_g_p_i_o_aab7724a81ced604abe323e21903e6fe5}{multipla\+\_\+escrita}} (std\+::vector$<$ GPIO\+\_\+\+Type\+Def $\ast$ $>$ portas, std\+::vector$<$ uint16\+\_\+t $>$ pinos, GPIO\+\_\+\+Pin\+State estado)
+\item 
+bool \mbox{\hyperlink{class_g_p_i_o_a8e3d4f7c8020aedf996edc78da0bac7f}{ler}} (uint16\+\_\+t \mbox{\hyperlink{class_g_p_i_o_a1405d2e3bcd75a321747ec3973063e8d}{pino}})
+\item 
+void \mbox{\hyperlink{class_g_p_i_o_ade8d7d4a06b41825dcdde3ff711b73e6}{toggle}} (uint32\+\_\+t tempo\+\_\+em\+\_\+alto=1000, uint32\+\_\+t tempo\+\_\+em\+\_\+baixo=1000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GPIO\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{class_g_p_i_o_a90fb936d88a57581a6783576bc6ac374}{porta}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{class_g_p_i_o_a1405d2e3bcd75a321747ec3973063e8d}{pino}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_p_i_o_ab443a641cef81b1a9ec0211c5aa9c1ac}\label{class_g_p_i_o_ab443a641cef81b1a9ec0211c5aa9c1ac}} 
+\index{GPIO@{GPIO}!GPIO@{GPIO}}
+\index{GPIO@{GPIO}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{GPIO()}{GPIO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily GPIO\+::\+GPIO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_g_p_i_o_a1fc2b93f6c66e85fab2f6cfadc486971}\label{class_g_p_i_o_a1fc2b93f6c66e85fab2f6cfadc486971}} 
+\index{GPIO@{GPIO}!GPIO@{GPIO}}
+\index{GPIO@{GPIO}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{GPIO()}{GPIO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily GPIO\+::\+GPIO (\begin{DoxyParamCaption}\item[{GPIO\+\_\+\+Type\+Def $\ast$}]{endereco\+\_\+porta,  }\item[{uint16\+\_\+t}]{endereco\+\_\+pino }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_p_i_o_a3d02df5cc317d938691346ee0a6aac53}\label{class_g_p_i_o_a3d02df5cc317d938691346ee0a6aac53}} 
+\index{GPIO@{GPIO}!escrever@{escrever}}
+\index{escrever@{escrever}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{escrever()}{escrever()}}
+{\footnotesize\ttfamily void GPIO\+::escrever (\begin{DoxyParamCaption}\item[{GPIO\+\_\+\+Pin\+State}]{estado }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_p_i_o_a8e3d4f7c8020aedf996edc78da0bac7f}\label{class_g_p_i_o_a8e3d4f7c8020aedf996edc78da0bac7f}} 
+\index{GPIO@{GPIO}!ler@{ler}}
+\index{ler@{ler}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily bool GPIO\+::ler (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{pino }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_p_i_o_aab7724a81ced604abe323e21903e6fe5}\label{class_g_p_i_o_aab7724a81ced604abe323e21903e6fe5}} 
+\index{GPIO@{GPIO}!multipla\_escrita@{multipla\_escrita}}
+\index{multipla\_escrita@{multipla\_escrita}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{multipla\_escrita()}{multipla\_escrita()}}
+{\footnotesize\ttfamily void GPIO\+::multipla\+\_\+escrita (\begin{DoxyParamCaption}\item[{std\+::vector$<$ GPIO\+\_\+\+Type\+Def $\ast$ $>$}]{portas,  }\item[{std\+::vector$<$ uint16\+\_\+t $>$}]{pinos,  }\item[{GPIO\+\_\+\+Pin\+State}]{estado }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_p_i_o_ade8d7d4a06b41825dcdde3ff711b73e6}\label{class_g_p_i_o_ade8d7d4a06b41825dcdde3ff711b73e6}} 
+\index{GPIO@{GPIO}!toggle@{toggle}}
+\index{toggle@{toggle}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{toggle()}{toggle()}}
+{\footnotesize\ttfamily void GPIO\+::toggle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tempo\+\_\+em\+\_\+alto = {\ttfamily 1000},  }\item[{uint32\+\_\+t}]{tempo\+\_\+em\+\_\+baixo = {\ttfamily 1000} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_p_i_o_a1405d2e3bcd75a321747ec3973063e8d}\label{class_g_p_i_o_a1405d2e3bcd75a321747ec3973063e8d}} 
+\index{GPIO@{GPIO}!pino@{pino}}
+\index{pino@{pino}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{pino}{pino}}
+{\footnotesize\ttfamily uint16\+\_\+t GPIO\+::pino\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_p_i_o_a90fb936d88a57581a6783576bc6ac374}\label{class_g_p_i_o_a90fb936d88a57581a6783576bc6ac374}} 
+\index{GPIO@{GPIO}!porta@{porta}}
+\index{porta@{porta}!GPIO@{GPIO}}
+\doxysubsubsection{\texorpdfstring{porta}{porta}}
+{\footnotesize\ttfamily GPIO\+\_\+\+Type\+Def$\ast$ GPIO\+::porta\hspace{0.3cm}{\ttfamily [private]}}
+
