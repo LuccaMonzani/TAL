@@ -3,10 +3,10 @@ var indexSectionsWithContent =
   0: "bcdefghilmprst~",
   1: "cgis",
   2: "f",
-  3: "cfgips",
+  3: "cfgiprs",
   4: "cegilmrst~",
   5: "bcdefhilmprt",
-  6: "t"
+  6: "rt"
 };
 
 var indexSectionNames =

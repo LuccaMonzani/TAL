@@ -1,0 +1,93 @@
+\hypertarget{namespacetask__start}{}\doxysection{task\+\_\+start Namespace Reference}
+\label{namespacetask__start}\index{task\_start@{task\_start}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacetask__start_a5dba742f02810ea6693f3c379b8ec03d}{start\+\_\+task}} (Update update, Callback\+Context ctx)
+\item 
+int \mbox{\hyperlink{namespacetask__start_a8c2b18fed3f8ed52d61278a4eb3e3f60}{subsystem\+\_\+selector}} (Update update, Callback\+Context ctx)
+\item 
+int \mbox{\hyperlink{namespacetask__start_ad418152753d900ad493ece85d94c5e46}{task\+\_\+selector}} (Update update, Callback\+Context ctx)
+\item 
+int \mbox{\hyperlink{namespacetask__start_a261cbb128552e7992d81791c9c125f2e}{task\+\_\+starter}} (Update update, Callback\+Context ctx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetask__start_a670bc7d5f47b33d5a37703d10c376c37}{SYSTEM}}
+\item 
+\mbox{\hyperlink{namespacetask__start_ac8a14867dc13d095a3b3e21e07569eab}{SUBSYSTEM}}
+\item 
+\mbox{\hyperlink{namespacetask__start_a195197cb757b952ddf40b04893e02232}{TASK}}
+\item 
+\mbox{\hyperlink{namespacetask__start_a8788da161eda586c9aaf834cdf836531}{start\+\_\+handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetask__start_a5dba742f02810ea6693f3c379b8ec03d}\label{namespacetask__start_a5dba742f02810ea6693f3c379b8ec03d}} 
+\index{task\_start@{task\_start}!start\_task@{start\_task}}
+\index{start\_task@{start\_task}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{start\_task()}{start\_task()}}
+{\footnotesize\ttfamily  int task\+\_\+start.\+start\+\_\+task (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Callback\+Context}]{ctx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetask__start_a8c2b18fed3f8ed52d61278a4eb3e3f60}\label{namespacetask__start_a8c2b18fed3f8ed52d61278a4eb3e3f60}} 
+\index{task\_start@{task\_start}!subsystem\_selector@{subsystem\_selector}}
+\index{subsystem\_selector@{subsystem\_selector}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{subsystem\_selector()}{subsystem\_selector()}}
+{\footnotesize\ttfamily  int task\+\_\+start.\+subsystem\+\_\+selector (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Callback\+Context}]{ctx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetask__start_ad418152753d900ad493ece85d94c5e46}\label{namespacetask__start_ad418152753d900ad493ece85d94c5e46}} 
+\index{task\_start@{task\_start}!task\_selector@{task\_selector}}
+\index{task\_selector@{task\_selector}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{task\_selector()}{task\_selector()}}
+{\footnotesize\ttfamily  int task\+\_\+start.\+task\+\_\+selector (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Callback\+Context}]{ctx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetask__start_a261cbb128552e7992d81791c9c125f2e}\label{namespacetask__start_a261cbb128552e7992d81791c9c125f2e}} 
+\index{task\_start@{task\_start}!task\_starter@{task\_starter}}
+\index{task\_starter@{task\_starter}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{task\_starter()}{task\_starter()}}
+{\footnotesize\ttfamily  int task\+\_\+start.\+task\+\_\+starter (\begin{DoxyParamCaption}\item[{Update}]{update,  }\item[{Callback\+Context}]{ctx }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetask__start_a8788da161eda586c9aaf834cdf836531}\label{namespacetask__start_a8788da161eda586c9aaf834cdf836531}} 
+\index{task\_start@{task\_start}!start\_handler@{start\_handler}}
+\index{start\_handler@{start\_handler}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{start\_handler}{start\_handler}}
+{\footnotesize\ttfamily task\+\_\+start.\+start\+\_\+handler}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  ConversationHandler(}
+\DoxyCodeLine{2     entry\_points=[CommandHandler(\textcolor{stringliteral}{"{}start"{}}, start\_task)],}
+\DoxyCodeLine{3     states=\{}
+\DoxyCodeLine{4         SYSTEM: [MessageHandler(Filters.text \& \string~Filters.command, subsystem\_selector)],}
+\DoxyCodeLine{5         SUBSYSTEM: [MessageHandler(Filters.text \& \string~Filters.command, task\_selector)],}
+\DoxyCodeLine{6         TASK: [MessageHandler(Filters.text \& \string~Filters.command, task\_starter)],}
+\DoxyCodeLine{7         ConversationHandler.TIMEOUT: [MessageHandler(Filters.text | Filters.command, timeout)],}
+\DoxyCodeLine{8     \},}
+\DoxyCodeLine{9     fallbacks=[CommandHandler(\textcolor{stringliteral}{"{}cancel"{}}, cancel)],}
+\DoxyCodeLine{10     conversation\_timeout=30,}
+\DoxyCodeLine{11 )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacetask__start_ac8a14867dc13d095a3b3e21e07569eab}\label{namespacetask__start_ac8a14867dc13d095a3b3e21e07569eab}} 
+\index{task\_start@{task\_start}!SUBSYSTEM@{SUBSYSTEM}}
+\index{SUBSYSTEM@{SUBSYSTEM}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{SUBSYSTEM}{SUBSYSTEM}}
+{\footnotesize\ttfamily task\+\_\+start.\+SUBSYSTEM}
+
+\mbox{\Hypertarget{namespacetask__start_a670bc7d5f47b33d5a37703d10c376c37}\label{namespacetask__start_a670bc7d5f47b33d5a37703d10c376c37}} 
+\index{task\_start@{task\_start}!SYSTEM@{SYSTEM}}
+\index{SYSTEM@{SYSTEM}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{SYSTEM}{SYSTEM}}
+{\footnotesize\ttfamily task\+\_\+start.\+SYSTEM}
+
+\mbox{\Hypertarget{namespacetask__start_a195197cb757b952ddf40b04893e02232}\label{namespacetask__start_a195197cb757b952ddf40b04893e02232}} 
+\index{task\_start@{task\_start}!TASK@{TASK}}
+\index{TASK@{TASK}!task\_start@{task\_start}}
+\doxysubsubsection{\texorpdfstring{TASK}{TASK}}
+{\footnotesize\ttfamily task\+\_\+start.\+TASK}
+

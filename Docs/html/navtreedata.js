@@ -25,7 +25,10 @@
 var NAVTREE =
 [
   [ "TAL", "index.html", [
-    [ "Pagina inicial", "index.html#autotoc_md1", null ],
+    [ "TAL", "md__docs_custom_pages__pagina_inicial.html", [
+      [ "Pagina inicial", "md__docs_custom_pages__pagina_inicial.html#autotoc_md1", null ]
+    ] ],
+    [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
