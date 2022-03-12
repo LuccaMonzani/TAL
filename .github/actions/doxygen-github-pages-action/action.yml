@@ -31,7 +31,7 @@ runs:
       shell: bash
 
     - name: Generate Doxygen Documentation
-      run: doxygen
+      run: doxygen Docs/Doxyfile
       shell: bash
       
     - name: Create .nojekyll (ensures pages with underscores work on gh pages)
