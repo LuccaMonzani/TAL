@@ -1,0 +1,45 @@
+\hypertarget{_c_a_n_8hpp_source}{}\doxysection{CAN.\+hpp}
+\label{_c_a_n_8hpp_source}\index{Inc/CAN.hpp@{Inc/CAN.hpp}}
+\mbox{\hyperlink{_c_a_n_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifdef HAL\_CAN\_MODULE\_ENABLED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}stm32f1xx\_hal\_can.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef SRC\_CAN\_H\_}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define SRC\_CAN\_H\_}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}stm32f1xx\_hal.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_can}{Can}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     CAN\_HandleTypeDef *\mbox{\hyperlink{class_can_ae762158c35d3ad8aec9f9915873ac1b1}{handler}};}
+\DoxyCodeLine{15     CAN\_FilterTypeDef \mbox{\hyperlink{class_can_a3276009b0150ecb538a9ced162760385}{filtro}};}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     CAN\_TxHeaderTypeDef \mbox{\hyperlink{class_can_a8aa5b2926a6bc3040b2413f38bdc4885}{tx\_header}};}
+\DoxyCodeLine{18     CAN\_RxHeaderTypeDef \mbox{\hyperlink{class_can_a835f3c89e2d035bed5e9b898c3b115d7}{rx\_header}};}
+\DoxyCodeLine{19     uint32\_t \mbox{\hyperlink{class_can_a39b2ca8f9eeda3c40a61b3d4fc60b084}{mailbox}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     uint32\_t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_can_a7680303229e025740d7a50e0ef7df1a8}{lock}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_can_a42692623ed35d0df7ec1f3da67dc8066}{Can}}(CAN\_HandleTypeDef *\mbox{\hyperlink{class_can_ae762158c35d3ad8aec9f9915873ac1b1}{handler}}, uint32\_t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\_t \textcolor{keywordtype}{id});}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_ad7d6fe131d5e3eeccc7468cf900a7f10}{iniciar}}(uint32\_t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\_t \textcolor{keywordtype}{id});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_ae7e3f9ab5eb8f74c51ef8a96f4f835e0}{setup}}(uint32\_t \mbox{\hyperlink{class_can_a545e60b1ac834dab75a3377cba748c1e}{interrupt}}, uint32\_t id\_high, uint32\_t id\_low, uint32\_t mask\_high, uint32\_t mask\_low);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     uint8\_t *\mbox{\hyperlink{class_can_ad3343c00d88f9b7460a1d6c1ebfb9bbf}{ler}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_can_a98e67a8a35ded18f35c79ab7d43ca7a6}{enviar}}(uint8\_t *dados, uint8\_t tamanho);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_can_a331fd2bb34627200b531e47427451b91}{esperar}}();}
+\DoxyCodeLine{34     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_can_a43973d2de0ff08db8542a24815c586af}{\string~Can}}();}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SRC\_CAN\_H\_ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_CAN\_MODULE\_ENABLED */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
