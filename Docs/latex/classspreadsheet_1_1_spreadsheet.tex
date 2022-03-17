@@ -1,0 +1,116 @@
+\hypertarget{classspreadsheet_1_1_spreadsheet}{}\doxysection{spreadsheet.\+Spreadsheet Class Reference}
+\label{classspreadsheet_1_1_spreadsheet}\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+Inheritance diagram for spreadsheet.\+Spreadsheet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classspreadsheet_1_1_spreadsheet}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_a9fa2ca24364066ef8301871f50f6bd8a}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, str sheet\+\_\+id, list scope, str auth\+\_\+file, bool debug)
+\item 
+None \mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_a36d20749ab907535c90c751373d76307}{add\+\_\+sheet}} (self, str sheet\+\_\+name, int worksheet\+\_\+id)
+\item 
+gspread.\+worksheet.\+Worksheet \mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_ad694394a1a8f7e31d24f280faee6e9d4}{sheet}} (self, str sheet\+\_\+name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_a7280ca53dd4dbec71ac9304613134ecc}{client}}
+\item 
+\mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_a557aefdf415d1973359cc2077ca70099}{ss}}
+\item 
+\mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_ada8b35764dc075f79ccd841bfd2889d9}{sheets}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classspreadsheet_1_1_spreadsheet_a401d2d7a63f1e3d5f62f83617eb6b256}{\+\_\+\+\_\+debug}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Class used to communicate with Google spreadsheets
+
+Parameters
+----------
+sheet_id - str: Identifier of google spreadsheet
+scope - list: Google Drive authorization scope
+auth_file - str: Name of authentication file
+debug - bool: Enables debug mode
+
+Attributes
+----------
+ss - gspread.Spreadsheet: Google spreadsheet
+sheets - {str: gspread.Worksheet}: Dictionary containing
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_a9fa2ca24364066ef8301871f50f6bd8a}\label{classspreadsheet_1_1_spreadsheet_a9fa2ca24364066ef8301871f50f6bd8a}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def spreadsheet.\+Spreadsheet.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{sheet\+\_\+id,  }\item[{list}]{scope,  }\item[{str}]{auth\+\_\+file,  }\item[{bool}]{debug }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{classspreadsheet_1_1_system_spreadsheet_a4cb4c1d944cbdae26c12242c9dcfc86e}{spreadsheet.\+System\+Spreadsheet}}, and \mbox{\hyperlink{classspreadsheet_1_1_electric_spreadsheet_a309b64563fbdb9560490eb8e4ffa1db4}{spreadsheet.\+Electric\+Spreadsheet}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_a36d20749ab907535c90c751373d76307}\label{classspreadsheet_1_1_spreadsheet_a36d20749ab907535c90c751373d76307}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!add\_sheet@{add\_sheet}}
+\index{add\_sheet@{add\_sheet}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{add\_sheet()}{add\_sheet()}}
+{\footnotesize\ttfamily  None spreadsheet.\+Spreadsheet.\+add\+\_\+sheet (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{sheet\+\_\+name,  }\item[{int}]{worksheet\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Registers new sheet based on its ID
+
+Parameters
+----------
+sheet_name - str: Identifier that will be used to access worksheet
+worksheet_id - str: Identifier of worksheet
+\end{DoxyVerb}
+ \mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_ad694394a1a8f7e31d24f280faee6e9d4}\label{classspreadsheet_1_1_spreadsheet_ad694394a1a8f7e31d24f280faee6e9d4}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!sheet@{sheet}}
+\index{sheet@{sheet}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{sheet()}{sheet()}}
+{\footnotesize\ttfamily  gspread.\+worksheet.\+Worksheet spreadsheet.\+Spreadsheet.\+sheet (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{str}]{sheet\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a specific worksheet
+
+Parameters
+----------
+sheet_name - str: Identifier of registered sheet
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_a401d2d7a63f1e3d5f62f83617eb6b256}\label{classspreadsheet_1_1_spreadsheet_a401d2d7a63f1e3d5f62f83617eb6b256}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!\_\_debug@{\_\_debug}}
+\index{\_\_debug@{\_\_debug}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{\_\_debug}{\_\_debug}}
+{\footnotesize\ttfamily spreadsheet.\+Spreadsheet.\+\_\+\+\_\+debug\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_a7280ca53dd4dbec71ac9304613134ecc}\label{classspreadsheet_1_1_spreadsheet_a7280ca53dd4dbec71ac9304613134ecc}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!client@{client}}
+\index{client@{client}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily spreadsheet.\+Spreadsheet.\+client}
+
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_ada8b35764dc075f79ccd841bfd2889d9}\label{classspreadsheet_1_1_spreadsheet_ada8b35764dc075f79ccd841bfd2889d9}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!sheets@{sheets}}
+\index{sheets@{sheets}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{sheets}{sheets}}
+{\footnotesize\ttfamily spreadsheet.\+Spreadsheet.\+sheets}
+
+\mbox{\Hypertarget{classspreadsheet_1_1_spreadsheet_a557aefdf415d1973359cc2077ca70099}\label{classspreadsheet_1_1_spreadsheet_a557aefdf415d1973359cc2077ca70099}} 
+\index{spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}!ss@{ss}}
+\index{ss@{ss}!spreadsheet.Spreadsheet@{spreadsheet.Spreadsheet}}
+\doxysubsubsection{\texorpdfstring{ss}{ss}}
+{\footnotesize\ttfamily spreadsheet.\+Spreadsheet.\+ss}
+
