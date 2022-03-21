@@ -4,12 +4,15 @@
  *  Created on: Feb 7, 2022
  *      Author: lucca
  */
-#include "stm32f1xx_hal.h"
-#include <stdio.h>
-#include <stdlib.h>
+
+#ifdef HAL_ADC_MODULE_ENABLED
 
 #ifndef SRC_CLASSADC_H_
 #define SRC_CLASSADC_H_
+
+#include "stm32f1xx_hal.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 class ADC {
 
@@ -33,5 +36,7 @@ private:
 	uint32_t buffer[10];
 
 };
+
 #endif /* SRC_CLASSADC_H_ */
 
+#endif /* HAL_ADC_MODULE_ENABLED */
