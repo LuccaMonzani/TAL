@@ -1,12 +1,14 @@
+#include "Comum.hpp"
+
 #ifdef HAL_SPI_MODULE_ENABLED
 #include "stm32f1xx_hal_spi.h"
 
-#ifndef SRC_SPI_HPP_
-#define SRC_SPI_HPP_
+#ifndef TAL_SPI
+#define TAL_SPI
 
+#include "GPIO.hpp"
 #include <vector>
 #include <string>
-#include "GPIO.hpp"
 
 class SPI {
 private:
@@ -35,6 +37,6 @@ public:
 };
 
 
-#endif /* SRC_SPI_HPP_ */
+#endif /* TAL_SPI */
 
 #endif /* HAL_SPI_MODULE_ENABLED */

@@ -1,5 +1,6 @@
-#ifdef HAL_CAN_MODULE_ENABLED
 #include "CAN.hpp"
+
+#ifdef HAL_CAN_MODULE_ENABLED
 
 Can::Can(CAN_HandleTypeDef *handler, uint32_t interrupt, uint32_t id) {
     this->handler = handler;

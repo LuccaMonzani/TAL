@@ -1,20 +1,13 @@
-/*
- * GPIO.hpp
- *
- *  Created on: Feb 3, 2022
- *      Author: Vitor Matias
- */
+#include "Comum.hpp"
 
 #ifdef HAL_GPIO_MODULE_ENABLED
 #include "stm32f1xx_hal_gpio.h"
 
+#ifndef TAL_GPIO
+#define TAL_GPIO
 
-#ifndef INC_GPIO_HPP_
-#define INC_GPIO_HPP_
-
-#include <vector>
 #include <stdint.h>
-
+#include <vector>
 
 
 class GPIO
@@ -35,8 +28,8 @@ class GPIO
 
 			void toggle(uint32_t tempo_em_alto = 1000, uint32_t tempo_em_baixo = 1000);
 };
- // namespace GPIO
 
-#endif /* INC_GPIO_HPP_ */
+
+#endif /* TAL_GPIO */
 
 #endif /* HAL_GPIO_MODULE_ENABLED */

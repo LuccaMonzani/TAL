@@ -1,5 +1,5 @@
-#ifdef HAL_GPIO_MODULE_ENABLED
 #include "GPIO.hpp"
+#ifdef HAL_GPIO_MODULE_ENABLED
 
 void GPIO::escrever(GPIO_PinState estado)
 {

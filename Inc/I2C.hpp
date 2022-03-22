@@ -1,8 +1,10 @@
+#include "Comum.hpp"
+
 #ifdef HAL_I2C_MODULE_ENABLED
 #include "stm32f1xx_hal_i2c.h"
 
-#ifndef I2C_H
-#define I2C_H
+#ifndef TAL_I2C
+#define TAL_I2C
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -21,7 +23,6 @@ class I2C {
 
 };
 
-#endif
-
+#endif /* TAL_I2C */
 
 #endif /* HAL_I2C_MODULE_ENABLED */

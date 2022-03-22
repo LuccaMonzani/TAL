@@ -32,5 +32,5 @@
 *.app
 
 # Doc files
-Docs/html/**
-Docs/latex/**
+Docs/html
+Docs/latex

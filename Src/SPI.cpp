@@ -1,3 +1,5 @@
+#include "SPI.hpp"
+
 #ifdef HAL_SPI_MODULE_ENABLED
 #include "stm32f1xx_hal_spi.h"
 

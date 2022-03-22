@@ -1,5 +1,7 @@
-#ifndef FILTROS
-#define FILTROS
+#include "Comum.hpp"
+
+#ifndef TAL_FILTROS
+#define TAL_FILTROS
 
 #include <vector>
 #include <math.h>
@@ -27,4 +29,4 @@ namespace Filtros
     std::vector<T> media_movel_exponencial(std::vector<T> dados, uint8_t tamanho_da_amostra);
 }
 
-#endif
+#endif /* TAL_FILTROS */

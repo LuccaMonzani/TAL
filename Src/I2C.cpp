@@ -1,5 +1,6 @@
-#ifdef HAL_I2C_MODULE_ENABLED
 #include "I2C.hpp"
+
+#ifdef HAL_I2C_MODULE_ENABLED
 
 I2C::I2C(I2C_HandleTypeDef* handler, uint16_t endereco, uint32_t delay){
     this->handler = handler;

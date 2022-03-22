@@ -1,9 +1,11 @@
+#include "Comum.hpp"
+
 #ifdef HAL_CAN_MODULE_ENABLED
 #include "stm32f1xx_hal_can.h"
 
 
-#ifndef SRC_CAN_H_
-#define SRC_CAN_H_
+#ifndef TAL_CAN
+#define TAL_CAN
 
 #include "stm32f1xx_hal.h"
 #include <stdlib.h>
@@ -34,6 +36,6 @@ public:
     virtual ~Can();
 };
 
-#endif /* SRC_CAN_H_ */
+#endif /* TAL_CAN */
 
 #endif /* HAL_CAN_MODULE_ENABLED */
