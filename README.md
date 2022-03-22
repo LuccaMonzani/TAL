@@ -56,4 +56,4 @@ São implementadas como classes genéricas:
 
 ## Complementos
 
-[Documentação](https://docs.google.com/document/d/1eUKlfLGgAHjWBRXNp35zcnhgNHb5ZKfJx6TLp2YPtLc/edit)
+[Documentação](https://eesc-usp-tupa.github.io/TAL/)
