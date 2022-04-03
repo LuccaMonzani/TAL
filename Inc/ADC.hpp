@@ -31,7 +31,7 @@ private:
 	uiunt8_t sens_num;
 	ADC_HandleTypeDef *hadc;
 	uint32_t sens_vec_val[sens_num];
-	uint32_t buffer[10];
+	uint32_t buffer[sens_num];
 
 };
 
