@@ -23,9 +23,7 @@ public:
 	ADC_HandleTypeDef* Get_chanel();
 	void Set_sens_num(uint8_t sens_number);
 	uint32_t *Get_sens_vec_val();
-	void Set_sens_vec();
 	uint32_t* Get_buffer();
-	void Set_buffer();
 	void Ler_DMA();
 	void Parar_DMA();
 

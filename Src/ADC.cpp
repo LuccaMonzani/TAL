@@ -40,10 +40,7 @@ uint32_t* ADC::Get_buffer(){
 
 
 void ADC::Ler_DMA() {
-	for(uint8_t i = 0; i < SENS_NUM; i++){
-		HAL_ADC_Start_DMA(this->hadc, this->buffer, 10);
-		this->sens_vec_val[i] = Media_movel(this->buffer, 10);
-	}
+	HAL_ADC_Start_DMA(this->hadc, this->buffer, 10);
 }
 
 void ADC::Parar_DMA(){
