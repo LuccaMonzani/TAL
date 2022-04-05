@@ -16,10 +16,10 @@ void GPIO::multipla_escrita(std::vector<GPIO_TypeDef *> portas, std::vector<uint
 	}
 }
 
-bool GPIO::ler(uint16_t pino)
+bool GPIO::ler()
 {
 	/*Le os dados de uma GPIO*/
-	return (bool)HAL_GPIO_ReadPin(this->porta, this->pino);
+	return HAL_GPIO_ReadPin(this->porta, this->pino) == GPIO_PIN_SET;
 }
 
 void GPIO::toggle(uint32_t tempo_em_alto, uint32_t tempo_em_baixo)

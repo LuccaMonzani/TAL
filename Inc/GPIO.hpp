@@ -24,7 +24,7 @@ class GPIO
 			
 			void multipla_escrita(std::vector<GPIO_TypeDef *> portas, std::vector<uint16_t> pinos, GPIO_PinState estado);
 
-			bool ler(uint16_t pino);
+			bool ler();
 
 			void toggle(uint32_t tempo_em_alto = 1000, uint32_t tempo_em_baixo = 1000);
 };
